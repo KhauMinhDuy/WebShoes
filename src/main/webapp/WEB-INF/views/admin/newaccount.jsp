@@ -1,31 +1,30 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="commons/bootstrap.min.css">
-    <title>Edit Account</title>
+    <link rel="stylesheet" href="commons/bootstrap.min.css">
+    <title>New Account</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="w-50 text-center mx-auto">
 
-            <h1 class="text-center">Edit Account</h1>
+            <h1 class="text-center">New Account</h1>
             <h2 class="text-center alert alert-primary">${message}</h2>
             <form:form action="save-account" method="post" modelAttribute="account">
                 <table class="table table-bordered">
                     <tr>
                         <td>Username</td>
                         <td>
-                            <input class="w-100" type="text" name="username" value="${username.username}" readonly>
+                            <input class="w-100" type="text" name="username" value="${username.username}">
                         </td>
                     </tr>
                     <tr>
                         <td>Password</td>
                         <td>
-                            <input class="w-100" type="text" name="password" value="${username.password}" readonly>
+                            <input class="w-100" type="text" name="password" value="${username.password}">
                         </td>
                     </tr>
                     <tr>
@@ -48,7 +47,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input class="btn btn-primary w-100 mx-1" type="submit" value="SAVE">
+                            <input class="btn btn-primary w-100 mx-1" type="submit" value="NEW ACCOUNT">
                         </td>
 
                     </tr>
