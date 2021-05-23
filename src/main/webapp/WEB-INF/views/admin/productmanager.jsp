@@ -12,6 +12,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ProductManager</h1>
+<div class="container-fluid">
+    <div>
+        <h1 class="text-center">Product Manager</h1>
+        <div class="text-center">
+            <a href="new-account" class="btn btn-primary">New Product</a>
+        </div>
+
+    </div>
+</div>
 </body>
 </html>

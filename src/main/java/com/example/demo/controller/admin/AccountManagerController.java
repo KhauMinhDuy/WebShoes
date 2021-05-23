@@ -46,10 +46,13 @@ public class AccountManagerController {
     @PostMapping("/save-account")
     public String saveAccount(@ModelAttribute("account") Account account, Model model) {
         System.out.println(account);
-        account.setPassword(passwordEncoder.encode(account.getPassword()));
-        Account save = accountService.save(account);
-        String message = save != null ? "Thanh Cong" : "That Bai";
-        model.addAttribute("message", message);
+        Account save;
+        if (accountService.findByUsername(account.getUsername()).size() == 1) {
+            save = accountService.save(account);
+        } else {
+            account.setPassword(passwordEncoder.encode(account.getPassword()));
+            save = accountService.save(account);
+        }
         return "redirect:/account-manager";
     }
 

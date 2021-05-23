@@ -13,7 +13,6 @@
         <div class="w-50 text-center mx-auto">
 
             <h1 class="text-center">Edit Account</h1>
-            <h2 class="text-center alert alert-primary">${message}</h2>
             <form:form action="save-account" method="post" modelAttribute="account">
                 <table class="table table-bordered">
                     <tr>
