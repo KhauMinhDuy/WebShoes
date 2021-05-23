@@ -30,6 +30,13 @@
             <a class="" href="">MUA</a>
         </div>
 
+
+
+        <c:forEach var="product" items="${products}">
+
+
+        </c:forEach>
+
         <div style="width: 30%">
             <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
         </div>

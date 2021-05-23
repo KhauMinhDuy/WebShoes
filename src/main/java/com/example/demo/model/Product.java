@@ -1,77 +1,82 @@
 package com.example.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "products")
 public class Product {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	private String name;
+    private String name;
 
-	private String color;
+    private String color;
 
-	private long price;
+    private long price;
 
-	private String image;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "thumbnail_id")
+    private Thumbnail thumbnail;
 
-	public Product() {
-		super();
-	}
+    public Product() {
+        super();
+    }
 
-	public Product(String name, String color, long price, String image) {
-		super();
-		this.name = name;
-		this.color = color;
-		this.price = price;
-		this.image = image;
-	}
+    public Product(Long id, String name, String color, long price, Thumbnail thumbnail) {
+        this.id = id;
+        this.name = name;
+        this.color = color;
+        this.price = price;
+        this.thumbnail = thumbnail;
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Product(String name, String color, long price) {
+        super();
+        this.name = name;
+        this.color = color;
+        this.price = price;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    }
 
-	public String getName() {
-		return name;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getColor() {
-		return color;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setColor(String color) {
-		this.color = color;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public long getPrice() {
-		return price;
-	}
+    public String getColor() {
+        return color;
+    }
 
-	public void setPrice(long price) {
-		this.price = price;
-	}
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-	public String getImage() {
-		return image;
-	}
+    public long getPrice() {
+        return price;
+    }
 
-	public void setImage(String image) {
-		this.image = image;
-	}
+    public void setPrice(long price) {
+        this.price = price;
+    }
 
+    public Thumbnail getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(Thumbnail thumbnail) {
+        this.thumbnail = thumbnail;
+    }
 }
