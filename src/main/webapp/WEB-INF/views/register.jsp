@@ -32,26 +32,31 @@
                     <td><input class="border border-dark w-100" type="text" name="username"/></td>
                     <td><form:errors path="username" cssClass="alert alert-danger" element="p"/></td>
                 </tr>
+                
                 <tr>
                     <td>Firstname</td>
                     <td><input class="border border-dark w-100" type="text" name="firstname"/></td>
                     <td><form:errors path="firstname" cssClass="alert alert-danger" element="p"/></td>
                 </tr>
+                
                 <tr>
                     <td>LastName</td>
                     <td><input class="border border-dark w-100" type="text" name="lastname"/></td>
                     <td><form:errors path="lastname" cssClass="alert alert-danger" element="p"/></td>
                 </tr>
+                
                 <tr>
                     <td>Email</td>
                     <td><input class="border border-dark w-100" type="text" name="email"/></td>
                     <td><form:errors path="email" cssClass="alert alert-danger" element="p"/></td>
                 </tr>
+                
                 <tr>
                     <td>Password</td>
                     <td><input class="border border-dark w-100" type="password" name="password"/></td>
                     <td><form:errors path="password" cssClass="alert alert-danger" element="p"/></td>
                 </tr>
+                
                 <tr>
                     <td>Confirm Password</td>
                     <td><input class="w-100" type="password" name="matchingpassword"/></td>

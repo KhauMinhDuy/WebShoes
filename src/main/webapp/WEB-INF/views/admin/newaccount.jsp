@@ -18,35 +18,35 @@
                     <tr>
                         <th scope="col">Username</th>
                         <th scope="col">
-                            <input class="w-100" type="text" name="username" value="${username.username}">
+                            <input class="w-100" type="text" name="username" value="${account.username}">
                         </th>
                     </tr>
 
                     <tr>
                         <td>Password</td>
                         <td>
-                            <input class="w-100" type="text" name="password" value="${username.password}">
+                            <input class="w-100" type="text" name="password" value="${account.password}">
                         </td>
                     </tr>
 
                     <tr>
                         <td>Firstname</td>
                         <td>
-                            <input class="w-100" type="text" name="firstname" value="${username.firstname}">
+                            <input class="w-100" type="text" name="firstname" value="${account.firstname}">
                         </td>
                     </tr>
 
                     <tr>
                         <td>Lastname</td>
                         <td>
-                            <input class="w-100" type="text" name="lastname" value="${username.lastname}">
+                            <input class="w-100" type="text" name="lastname" value="${account.lastname}">
                         </td>
                     </tr>
 
                     <tr>
                         <td>Email</td>
                         <td>
-                            <input class="w-100" type="text" name="email" value="${username.email}">
+                            <input class="w-100" type="text" name="email" value="${account.email}">
                         </td>
                     </tr>
 

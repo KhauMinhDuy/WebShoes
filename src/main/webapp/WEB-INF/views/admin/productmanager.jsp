@@ -61,8 +61,10 @@
             <tr>
                 <td>${i.getCount()}</td>
                 <td>${p.getName()}</td>
-                <td><img style="width: 50px; height: 50px" alt="" src="commons/images/${p.getThumbnail().getThumbnail1()}"></td>
-                <td><img style="width: 50px; height: 50px" alt="" src="commons/images/${p.getThumbnail().getThumbnail2()}"></td>
+                <td><img style="width: 50px; height: 50px" alt=""
+                         src="commons/images/${p.getThumbnail().getThumbnail1()}"></td>
+                <td><img style="width: 50px; height: 50px" alt=""
+                         src="commons/images/${p.getThumbnail().getThumbnail2()}"></td>
                 <td>${p.getColor()}</td>
                 <td>${p.getPrice()}</td>
 
@@ -139,31 +141,27 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel">!!!</h5>
-                                    <button type="button" class="btn-close"
-                                            data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">Delete this product ?</div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
                                     </button>
-                                    <button type="button" class="btn btn-danger"
-                                            style="font-size: 23px;">Delete
+                                    <button type="button" class="btn btn-danger" style="font-size: 23px;">Delete
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </td>
-
             </tr>
         </c:forEach>
-
     </table>
+
 </div>
 
-<script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
 </body>
