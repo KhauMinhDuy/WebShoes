@@ -7,6 +7,7 @@ import com.example.demo.model.Product;
 import com.example.demo.repository.ProductRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -22,6 +23,12 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public List<Product> findAllProducts() {
 		return productRepository.findAll();
+	}
+
+	@Override
+	public Product getProduct(Long id) {
+		Optional<Product> product = productRepository.findById(id);
+		return product.orElse(new Product());
 	}
 
 	@Override

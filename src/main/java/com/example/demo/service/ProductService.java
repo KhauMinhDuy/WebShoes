@@ -13,6 +13,8 @@ public interface ProductService {
 
 	List<Product> findAllProducts();
 
+	Product getProduct(Long id);
+
 	List<Product> sortAscByName();
 
 	List<Product> sortDescByName();

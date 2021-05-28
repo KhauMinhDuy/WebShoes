@@ -29,7 +29,7 @@
                 <h3>${product.name}</h3>
                 <h4>${product.color}</h4>
                 <h4>${product.price}</h4>
-                <a class="btn btn-primary" href="product-detail/{${product.id}}">MUA</a>
+                <a class="btn btn-primary" href="product-detail/${product.id}">MUA</a>
             </div>
         </c:forEach>
     </div>
