@@ -46,7 +46,7 @@
 
         <!-- --------------------- Logo Ananas --------------------- -->
         <div class="col-3 d-flex justify-content-center">
-            <a href=""><img src="commons/img/header/Logo_Ananas_Header.svg"></a>
+            <a href=""><img alt="Logo" src="commons/img/header/Logo_Ananas_Header.svg"></a>
         </div>
         <!-- --------------------------------------------------------------- -->
 
@@ -54,7 +54,7 @@
         <!-- --------------------- Menu Sáº£n Pháº©m --------------------- -->
         <div class="col-5 d-flex justify-content-around align-items-center">
             <div class="mid-navbar-menu-wrapper" data-menu="0">
-                <a href="" class="mid-navbar-menu position-relative d-flex align-items-center">
+                <a href="product-list" class="mid-navbar-menu position-relative d-flex align-items-center">
                     <span class="me-2">SẢN PHẨM</span>
                     <i class="up fas fa-chevron-up"></i>
                     <i class="down fas fa-chevron-down"></i>
@@ -108,7 +108,7 @@
 
             <!-- --------------------- Menu Nam --------------------- -->
             <div class="mid-navbar-menu-wrapper" data-menu="1">
-                <a href="" class="mid-navbar-menu d-flex align-items-center position-relative">
+                <a href="product-list" class="mid-navbar-menu d-flex align-items-center position-relative">
                     <span class="me-2">NAM</span>
                     <i class="up fas fa-chevron-up"></i>
                     <i class="down fas fa-chevron-down"></i>
@@ -197,7 +197,7 @@
 
             <!-- --------------------- Menu Ná»¯ --------------------- -->
             <div class="mid-navbar-menu-wrapper" data-menu="2">
-                <a href="" class="mid-navbar-menu d-flex align-items-center position-relative">
+                <a href="product-list" class="mid-navbar-menu d-flex align-items-center position-relative">
                     <span class="me-2">NỮ</span>
                     <i class="up fas fa-chevron-up"></i>
                     <i class="down fas fa-chevron-down"></i>
@@ -284,7 +284,7 @@
 
             <div class="mid-navbar-border">|</div>
 
-            <a href="" class="mid-navbar-menu d-flex align-items-center" data-menu="3">
+            <a href="product-list" class="mid-navbar-menu d-flex align-items-center" data-menu="3">
                 <span class="me-2">SALE OFF</span>
             </a>
 

@@ -23,51 +23,15 @@
 <div class="container">
     <img style="width: 100%" class="" alt="" src="commons/images/desktop_productlist.jpg">
     <div class="d-flex justify-content-between flex-wrap">
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A67008_1-500x500.jpg">
-            <h3>Name</h3>
-            <h4>Color</h4>
-            <a class="" href="">MUA</a>
-        </div>
-
-
-
         <c:forEach var="product" items="${products}">
-
-
+            <div style="width: 30%">
+                <img class="img-thumbnail" alt="" src="commons/images/${product.thumbnail.thumbnail1}">
+                <h3>${product.name}</h3>
+                <h4>${product.color}</h4>
+                <h4>${product.price}</h4>
+                <a class="btn btn-primary" href="product-detail/{${product.id}}">MUA</a>
+            </div>
         </c:forEach>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A67008_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A67008_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
-        </div>
-
-        <div style="width: 30%">
-            <img class="img-thumbnail" alt="" src="commons/images/pro_A6T006_1-500x500.jpg">
-        </div>
     </div>
 </div>
 
