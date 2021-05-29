@@ -21,18 +21,24 @@
 <%@ include file="/WEB-INF/tags/header.jsp" %>
 
 <div class="container">
-    <img style="width: 100%" class="" alt="" src="commons/images/desktop_productlist.jpg">
-    <div class="d-flex justify-content-between flex-wrap">
+
+    <div class="row my-5">
+        <img style="width: 100%" class="" alt="" src="commons/images/desktop_productlist.jpg">
+    </div>
+    
+    <div class="row">
         <c:forEach var="product" items="${products}">
-            <div style="width: 30%">
+            <div class="col-md-4">
                 <img class="img-thumbnail" alt="" src="commons/images/${product.thumbnail.thumbnail1}">
-                <h3>${product.name}</h3>
-                <h4>${product.color}</h4>
-                <h4>${product.price}</h4>
-                <a class="btn btn-primary" href="product-detail/${product.id}">MUA</a>
+                <h3 class="text-center fw-bold">${product.name}</h3>
+                <h4 class="text-center text-muted">${product.color}</h4>
+                <h4 class="text-center fw-bold">${product.price} VNĐ</h4>
+                <a class="d-block btn btn-primary w-25 mx-auto text-white" href="product-detail/${product.id}">MUA</a>
             </div>
         </c:forEach>
     </div>
+    
+    
 </div>
 
 <%@ include file="/WEB-INF/tags/footer.jsp" %>

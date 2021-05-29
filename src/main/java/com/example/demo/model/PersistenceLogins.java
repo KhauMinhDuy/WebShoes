@@ -22,7 +22,7 @@ public class PersistenceLogins {
 	private Account username;
 
 	@Column(name = "token", columnDefinition = "varchar(64) not null")
-	private String token;
+	private String token; 
 
 	@Column(name = "last_used", columnDefinition = "datetime")
 	private LocalTime last_used;

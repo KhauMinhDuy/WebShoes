@@ -46,6 +46,7 @@
     <h1 class="pt-5 pb-5">Porducts Manager</h1>
     <a href="new-product" class="btn btn-primary text-center">New Product</a>
     <table id="table-wrapper">
+        <caption></caption>
         <tr class="bg-secondary"
             style="height: 100px; font-size: 23px; Color: white;">
             <th>STT</th>
@@ -108,13 +109,13 @@
                                         </div>
                                         <div class="mb-3">
                                             <label>Thumbnail url 1:</label>
-                                            <input type="text" name="thumbnail1" class="form-control"
+                                            <input type="file" name="url1" class="form-control"
                                                    value="${p.getThumbnail().getThumbnail1()}">
                                         </div>
 
                                         <div class="mb-3">
                                             <label>Thumbnail url 2:</label>
-                                            <input type="text" name="thumbnail2" class="form-control"
+                                            <input type="file" name="url2" class="form-control"
                                                    value="${p.getThumbnail().getThumbnail2()}">
                                         </div>
                                         <div class="modal-footer">
