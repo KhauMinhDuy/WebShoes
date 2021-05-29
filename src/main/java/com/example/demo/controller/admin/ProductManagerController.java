@@ -58,8 +58,8 @@ public class ProductManagerController {
 
         Thumbnail thumbnail = new Thumbnail(url1.getOriginalFilename(), url2.getOriginalFilename());
         product.setThumbnail(thumbnail);
-        Path file1 = Files.write(Paths.get("src\\main\\webapp\\WEB-INF/commons/images/"+url1.getOriginalFilename()), url1.getBytes(), StandardOpenOption.CREATE);
-        Path file2 = Files.write(Paths.get("src\\main\\webapp\\WEB-INF/commons/images/"+url2.getOriginalFilename()), url2.getBytes(), StandardOpenOption.CREATE);
+        Path file1 = Files.write(Paths.get("D:\\Development\\Java\\SourceCode\\WebShoes\\src\\main\\webapp\\WEB-INF\\commons\\images/"+url1.getOriginalFilename()), url1.getBytes(), StandardOpenOption.CREATE);
+        Path file2 = Files.write(Paths.get("D:\\Development\\Java\\SourceCode\\WebShoes\\src\\main\\webapp\\WEB-INF\\commons\\images/"+url2.getOriginalFilename()), url2.getBytes(), StandardOpenOption.CREATE);
         if(Files.exists(file1) && Files.exists(file2)) {
             thumbnailService.save(thumbnail);
             productService.save(product);
