@@ -38,8 +38,8 @@
 					<c:forEach var="i" items="${products }">
 						<div class="col-4 mt-5">
 							<a href="product-detail/${i.id}" class="position-relative img-thumbnail-wrapper w-100">
-								<img src="commons/images/${i.getThumbnail().getThumbnail1()}" class="img-thumbnail thumbnail-1 product-img w-100"> 
-								<img src="commons/images/${i.getThumbnail().getThumbnail2()}" class="img-thumbnail thumbnail-2 product-img w-100 position-absolute top-0">
+								<img src="commons/images/${i.getThumbnail().getThumbnail1()}" class="img-thumbnail thumbnail-1 product-img w-100 h-100"> 
+								<img src="commons/images/${i.getThumbnail().getThumbnail2()}" class="img-thumbnail thumbnail-2 product-img w-100 h-100 position-absolute top-0">
 								<div class="position-absolute buy-now pt-2 pb-2 d-flex justify-content-center">MUA NGAY</div>
 							</a>
 							<div class="w-100 d-flex flex-column align-items-center justify-content-center mt-3">

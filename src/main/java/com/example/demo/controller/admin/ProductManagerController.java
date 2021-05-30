@@ -29,6 +29,9 @@ public class ProductManagerController {
 
     @Autowired
     private ThumbnailService thumbnailService;
+    
+    
+    private String uploadDirectory = System.getProperty("user.dir") + "src/main/webapp/WEB-INF/commons/images/";
 
     @GetMapping("/product-manager")
     public String getProductManager(Model model) {
@@ -43,7 +46,9 @@ public class ProductManagerController {
     }
 
     @PostMapping("/product-manager/update1")
-    private String update(@ModelAttribute("product") Product product, @RequestParam("url1") MultipartFile url1, @RequestParam("url2") MultipartFile url2 ) {
+    private String update(@ModelAttribute("product") Product product, 
+    		@RequestParam("url1") MultipartFile url1, 
+    		@RequestParam("url2") MultipartFile url2 ) {
         Thumbnail thumbnails = new Thumbnail(url1.getOriginalFilename(),url2.getOriginalFilename());
         product.setThumbnail(thumbnails);
         productService.save(product);
@@ -58,6 +63,7 @@ public class ProductManagerController {
 
         Thumbnail thumbnail = new Thumbnail(url1.getOriginalFilename(), url2.getOriginalFilename());
         product.setThumbnail(thumbnail);
+        System.out.println(uploadDirectory);
         Path file1 = Files.write(Paths.get("D:\\Development\\Java\\SourceCode\\WebShoes\\src\\main\\webapp\\WEB-INF\\commons\\images/"+url1.getOriginalFilename()), url1.getBytes(), StandardOpenOption.CREATE);
         Path file2 = Files.write(Paths.get("D:\\Development\\Java\\SourceCode\\WebShoes\\src\\main\\webapp\\WEB-INF\\commons\\images/"+url2.getOriginalFilename()), url2.getBytes(), StandardOpenOption.CREATE);
         if(Files.exists(file1) && Files.exists(file2)) {

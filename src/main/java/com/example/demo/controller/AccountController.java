@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.model.Account;
 import com.example.demo.service.AccountService;
 
-import java.util.List;
-
 @Controller
 public class AccountController {
 
@@ -30,9 +30,6 @@ public class AccountController {
     public String getRegister() {
         return "register";
     }
-
-
-
 
     @PostMapping("/saveAccount")
     public String saveAccount(@Valid @ModelAttribute("account") Account account,
