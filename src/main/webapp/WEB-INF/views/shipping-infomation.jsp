@@ -25,28 +25,30 @@
 
 <div class="container">
     <div class="row my-5">
-        <form class="row" class="my-3" action="order-success">
+        <form class="row my-3" action="order-success">
             <div class="col-6">
                 <div class="display-6 " style="background-color: #F1F1F1;">
                     Thong tin giao hang
                 </div>
 
+                <input type="hidden" name="id" value="${product.id}">
+				
                 <div class="my-4">
-                    <input required="required" class="" type="text" name="name" id="" placeholder="Ho Ten"
+                    <input required="required" class="" type="text" name="name"  placeholder="Ho Ten"
                            style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
                 </div>
 
                 <div class="my-4">
-                    <input required="required" class="" type="text" name="phone" id=""
+                    <input required="required" class="" type="text" name="phone"
                            placeholder="So Dien THoai"
                            style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
                 </div>
                 <div class="my-4">
-                    <input required="required" class="" type="text" name="email" id="" placeholder="Email"
+                    <input required="required" class="" type="text" name="email"  placeholder="Email"
                            style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
                 </div>
                 <div class="my-4">
-                    <input required="required" class="" type="text" name="address" id=""
+                    <input required="required" class="" type="text" name="address"
                            placeholder="Dia Chi"
                            style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
                 </div>
@@ -81,11 +83,8 @@
                                value="DAT HANG">
                     </div>
                 </div>
-
             </div>
         </form>
-
-
     </div>
 </div>
 <%@include file="/WEB-INF/tags/footer.jsp" %>

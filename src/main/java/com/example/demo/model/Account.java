@@ -100,4 +100,16 @@ public class Account {
         this.email = email;
     }
 
+	public List<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
+	}
+    
+    public void addOrder(Order order) {
+    	this.orders.add(order);
+    }
+
 }

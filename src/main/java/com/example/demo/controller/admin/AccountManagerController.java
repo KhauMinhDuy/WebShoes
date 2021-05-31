@@ -1,7 +1,5 @@
 package com.example.demo.controller.admin;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -36,8 +34,8 @@ public class AccountManagerController {
 
 	@GetMapping("/edit-account")
 	public String editAccount(@RequestParam(name = "user") String user, Model model) {
-		List<Account> username = accountService.findByUsername(user);
-		model.addAttribute("username", username.get(0));
+		Account username = accountService.findByUsername(user);
+		model.addAttribute("username", username);
 		return "admin/editaccount";
 	}
 
@@ -51,7 +49,7 @@ public class AccountManagerController {
 	public String saveAccount(@ModelAttribute("account") Account account, Model model) {
 		System.out.println(account);
 		Account save = null;
-		if (accountService.findByUsername(account.getUsername()).size() == 1) {
+		if (accountService.findByUsername(account.getUsername()) != null) {
 			save = accountService.save(account);
 		} else {
 			account.setPassword(passwordEncoder.encode(account.getPassword()));

@@ -31,8 +31,7 @@ public class ProductController {
 		model.addAttribute("product", product);
 		return "product-detail";
 	}
-	
-	
+
 	@GetMapping("/shipping-infomation")
 	public String getShippingInfomation(@RequestParam("id") String id,@RequestParam("total") String total, @RequestParam("size") String size, Model model) {
 		if(total.equals("")) {
@@ -48,9 +47,7 @@ public class ProductController {
 		model.addAttribute("price", price);
 		return "shipping-infomation";
 	}
-	
-//	@GetMapping("/order-success")
-//	public String 
-	
-	
+
+
+
 }

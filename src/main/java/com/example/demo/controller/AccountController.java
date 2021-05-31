@@ -1,7 +1,5 @@
 package com.example.demo.controller;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,16 +39,15 @@ public class AccountController {
             return "register";
         }
 
-		List<Account> username = accountService.findByUsername(account.getUsername());
-		if(username.size() == 1) {
+		Account username = accountService.findByUsername(account.getUsername());
+		if(username != null) {
             model.addAttribute("message", "That bai");
             return "register";
         }
 
 		if (account.getPassword().equals(matchPass)) {
             account.setPassword(passwordEncoder.encode(account.getPassword()));
-            model.addAttribute("message", accountService.save(account) != null ?
-                    "THANH CONG" : "THAT BAI");
+            model.addAttribute("message", accountService.save(account) != null ? "THANH CONG" : "THAT BAI");
         } else {
             model.addAttribute("message", "Password khong trung khop");
         }

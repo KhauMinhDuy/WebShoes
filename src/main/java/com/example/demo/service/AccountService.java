@@ -10,7 +10,7 @@ public interface AccountService {
 
 	List<Account> findAll();
 
-	List<Account> findByUsername(String username);
+	Account findByUsername(String username);
 
 	void delete(Account account);
 }

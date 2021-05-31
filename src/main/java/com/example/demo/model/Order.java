@@ -1,12 +1,15 @@
 package com.example.demo.model;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -26,25 +29,25 @@ public class Order {
 
 	private String address;
 
-	private String city;
-
 	private LocalDateTime orderDate;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "account_id")
 	private Account account;
+	
+	@ManyToMany
+	private List<Product> products = new ArrayList<>();
 
 	public Order() {
 		super();
 	}
 
-	public Order(String name, String phone, String email, String address, String city, LocalDateTime orderDate) {
+	public Order(String name, String phone, String email, String address, LocalDateTime orderDate) {
 		super();
 		this.name = name;
 		this.phone = phone;
 		this.email = email;
 		this.address = address;
-		this.city = city;
 		this.orderDate = orderDate;
 	}
 
@@ -88,20 +91,32 @@ public class Order {
 		this.address = address;
 	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
 	public LocalDateTime getOrderDate() {
 		return orderDate;
 	}
 
 	public void setOrderDate(LocalDateTime orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+	public List<Product> getProducts() {
+		return products;
+	}
+
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+	
+	public void addProduct(Product product) {
+		this.products.add(product);
 	}
 
 }
