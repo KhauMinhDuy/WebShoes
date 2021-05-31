@@ -20,7 +20,13 @@
 <%@ include file="/WEB-INF/tags/header.jsp" %>
 
 <h1 class="container text-center" style="height: 800px;">
-    Page Not Found
+    <div>
+    	<img alt="" src="commons/images/page_not_found.png">
+    	<div>
+    		<a class="btn btn-info" href="home" style="padding: 10px 30px; color: white;"> QUAY LAI</a>
+    	</div>
+    	
+    </div>
 </h1>
 
 <%@ include file="/WEB-INF/tags/footer.jsp" %>

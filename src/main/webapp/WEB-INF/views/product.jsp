@@ -43,7 +43,7 @@
 								<div class="position-absolute buy-now pt-2 pb-2 d-flex justify-content-center">MUA NGAY</div>
 							</a>
 							<div class="w-100 d-flex flex-column align-items-center justify-content-center mt-3">
-								<a href="" class="main-product-name">${i.getName() }</a> 
+								<a href="product-detail/${i.id}" class="main-product-name">${i.getName() }</a> 
 								<span class="main-product-color mt-1">${i.getColor() }</span> 
 								<span class="main-product-price mt-1">${i.getPrice() }</span>
 							</div>
