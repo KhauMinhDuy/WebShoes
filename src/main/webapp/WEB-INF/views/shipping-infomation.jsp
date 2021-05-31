@@ -24,28 +24,28 @@
 
 	<div class="container">
 		<div class="row my-5">
-			<form class="row" class="my-3" action="">
+			<form class="row" class="my-3" action="order-success">
 				<div class="col-6">
 					<div class="display-6 " style="background-color: #F1F1F1;">
 						Thong tin giao hang
 					</div>
 
 					<div class="my-4">
-						<input class="" type="text" name="name" id="" placeholder="Ho Ten"
+						<input required="required" class="" type="text" name="name" id="" placeholder="Ho Ten"
 							style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
 					</div>
 
 					<div class="my-4">
-						<input class="" type="text" name="phone" id=""
+						<input required="required" class="" type="text" name="phone" id=""
 							placeholder="So Dien THoai"
 							style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
 					</div>
 					<div class="my-4">
-						<input class="" type="text" name="email" id="" placeholder="Email"
+						<input required="required" class="" type="text" name="email" id="" placeholder="Email"
 							style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
 					</div>
 					<div class="my-4">
-						<input class="" type="text" name="address" id=""
+						<input required="required" class="" type="text" name="address" id=""
 							placeholder="Dia Chi"
 							style="padding: 5px 0 5px 10px; border: 1px solid #CCCCCC;">
 					</div>
@@ -65,6 +65,9 @@
 							</div>
 							<div class="col-6">
 								<div class="ps-4 my-2" style="color: #808080; font-size: 20px;">x${total }</div>
+							</div>
+							<div class="col-6">
+								<div class="ps-4 my-2" style="color: #F15E2C; font-size: 20px; font-weight: bold;">${price } VND</div>
 							</div>
 						</div>
 						<div>

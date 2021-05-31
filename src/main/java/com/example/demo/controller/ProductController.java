@@ -35,15 +35,22 @@ public class ProductController {
 	
 	@GetMapping("/shipping-infomation")
 	public String getShippingInfomation(@RequestParam("id") String id,@RequestParam("total") String total, @RequestParam("size") String size, Model model) {
-		if(size.equals("")) {
-			size = "1";
+		if(total.equals("")) {
+			total = "1";
 		}
 		Product product = productService.getProduct(Long.parseLong(id));
+		
+		long price = Integer.parseInt(total) * product.getPrice();
+		
 		model.addAttribute("product", product);
 		model.addAttribute("size", size);
 		model.addAttribute("total", total);
+		model.addAttribute("price", price);
 		return "shipping-infomation";
 	}
+	
+//	@GetMapping("/order-success")
+//	public String 
 	
 	
 }
