@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="modal-body">
 
-                                    <form:form action="WebShoes/product-manager/update1" modelAttribute="product">
+                                    <form:form method="post" action="product-manager/update1" modelAttribute="product" enctype="multipart/form-data">
                                         <input type="hidden" class="form-control" name="id" value="${id}">
                                         <div class="mb-3">
                                             <label>Product name:</label>

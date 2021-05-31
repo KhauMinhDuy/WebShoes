@@ -32,6 +32,7 @@ public class ProductController {
 		return "product-detail";
 	}
 	
+	
 	@GetMapping("/shipping-infomation")
 	public String getShippingInfomation(@RequestParam("id") String id,@RequestParam("total") String total, @RequestParam("size") String size, Model model) {
 		if(size.equals("")) {

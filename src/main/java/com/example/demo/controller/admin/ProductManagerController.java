@@ -47,7 +47,7 @@ public class ProductManagerController {
     }
 
     @PostMapping("/product-manager/update1")
-    private String update(@ModelAttribute("product") Product product, 
+    public String update(@ModelAttribute("product") Product product, 
     		@RequestParam("url1") MultipartFile url1, 
     		@RequestParam("url2") MultipartFile url2 ) {
         Thumbnail thumbnails = new Thumbnail(url1.getOriginalFilename(),url2.getOriginalFilename());
