@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +18,17 @@
     <title>Order Success</title>
 </head>
 <body>
-    <%@ include file="/WEB-INF/tags/header.jsp" %>
-    
-    <div class="container" style="height: 800px;">
-    	<div class="row text-center mt-5">
-    		<div class="display-3">DAT HANG THANH CONG</div>
-    		<div>
-    			<a class="btn btn-info" href="product-list" style="padding: 10px 30px; color: white;"> QUAY LAI</a>
-    		</div>
-    	</div>
+<%@ include file="/WEB-INF/tags/header.jsp" %>
+
+<div class="container" style="height: 800px;">
+    <div class="row text-center mt-5">
+        <div class="display-3">DAT HANG THANH CONG</div>
+        <div>
+            <a class="btn btn-info" href="product-list" style="padding: 10px 30px; color: white;"> QUAY LAI</a>
+        </div>
     </div>
-    
-    <%@ include file="/WEB-INF/tags/footer.jsp" %>
+</div>
+
+<%@ include file="/WEB-INF/tags/footer.jsp" %>
 </body>
 </html>

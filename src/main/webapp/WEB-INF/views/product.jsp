@@ -1,8 +1,9 @@
+<%@ page import="java.text.DecimalFormat" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,35 +28,40 @@
     <div class="row my-5">
         <img style="width: 100%" class="" alt="" src="commons/images/desktop_productlist.jpg">
     </div>
-    
+
     <div class="container d-flex mb-5">
-		<div class="row w-100">
-			<div class="col-3 main-sidebar me-4 mt-5">SIDE BAR</div>
-			
-			<div class="col">
-				<div class="row w-100 main-products">
-				
-					<c:forEach var="i" items="${products }">
-						<div class="col-4 mt-5">
-							<a href="product-detail/${i.id}" class="position-relative img-thumbnail-wrapper w-100">
-								<img src="commons/images/${i.getThumbnail().getThumbnail1()}" class="img-thumbnail thumbnail-1 product-img w-100 h-100"> 
-								<img src="commons/images/${i.getThumbnail().getThumbnail2()}" class="img-thumbnail thumbnail-2 product-img w-100 h-100 position-absolute top-0">
-								<div class="position-absolute buy-now pt-2 pb-2 d-flex justify-content-center">MUA NGAY</div>
-							</a>
-							<div class="w-100 d-flex flex-column align-items-center justify-content-center mt-3">
-								<a href="product-detail/${i.id}" class="main-product-name">${i.getName() }</a> 
-								<span class="main-product-color mt-1">${i.getColor() }</span> 
-								<span class="main-product-price mt-1">${i.getPrice() }</span>
-							</div>
-						</div>
-					</c:forEach>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-    
-    
+        <div class="row w-100">
+            <div class="col-3 main-sidebar me-4 mt-5">SIDE BAR</div>
+
+            <div class="col">
+                <div class="row w-100 main-products">
+
+                    <c:forEach var="i" items="${products }">
+                        <div class="col-4 mt-5">
+                            <a href="product-detail/${i.id}" class="position-relative img-thumbnail-wrapper w-100">
+                                <img alt="" src="commons/images/${i.getThumbnail().getThumbnail1()}"
+                                     class="img-thumbnail thumbnail-1 product-img w-100 h-100">
+                                <img alt="" src="commons/images/${i.getThumbnail().getThumbnail2()}"
+                                     class="img-thumbnail thumbnail-2 product-img w-100 h-100 position-absolute top-0">
+                                <div class="position-absolute buy-now pt-2 pb-2 d-flex justify-content-center">
+                                    MUA NGAY
+                                </div>
+                            </a>
+                            <div class="w-100 d-flex flex-column align-items-center justify-content-center mt-3">
+                                <a href="product-detail/${i.id}" class="main-product-name">${i.getName() }</a>
+                                <span class="main-product-color mt-1">${i.getColor() }</span>
+                                <span class="main-product-price mt-1">
+                                    <fmt:formatNumber type="number" value="${i.price}"/>  VNĐ
+                                </span>
+                            </div>
+                        </div>
+                    </c:forEach>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <%@ include file="/WEB-INF/tags/footer.jsp" %>

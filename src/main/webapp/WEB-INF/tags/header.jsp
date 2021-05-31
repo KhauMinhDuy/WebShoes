@@ -46,7 +46,7 @@
 
         <!-- --------------------- Logo Ananas --------------------- -->
         <div class="col-3 d-flex justify-content-center">
-            <a href=""><img alt="Logo" src="commons/img/header/Logo_Ananas_Header.svg"></a>
+            <a href="home"><img alt="Logo" src="commons/img/header/Logo_Ananas_Header.svg"></a>
         </div>
         <!-- --------------------------------------------------------------- -->
 
