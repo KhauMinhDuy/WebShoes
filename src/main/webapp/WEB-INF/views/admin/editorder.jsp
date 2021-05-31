@@ -23,21 +23,21 @@
                     <caption></caption>
                     <input class="w-100" type="hidden" name="id" value="${order.id}">
                     <tr>
-                        <th scope="col">Username</th>
+                        <th scope="col">Name</th>
                         <th scope="col">
                             <input class="w-100" type="text" name="name" value="${order.name}">
                         </th>
                     </tr>
 
                     <tr>
-                        <td>Password</td>
+                        <td>Email</td>
                         <td>
                             <input class="w-100" type="text" name=email value="${order.email}">
                         </td>
                     </tr>
 
                     <tr>
-                        <td>Firstname</td>
+                        <td>Address</td>
                         <td>
                             <input class="w-100" type="text" name="address" value="${order.address}">
                         </td>
@@ -45,7 +45,7 @@
 
 
                     <tr>
-                        <td>Email</td>
+                        <td>Phone</td>
                         <td>
                             <input class="w-100" type="text" name="phone" value="${order.phone}">
                         </td>
@@ -59,7 +59,7 @@
 
                     <tr>
                         <td colspan="2">
-                            <a href="account-manager" class="btn btn-primary w-100">List</a>
+                            <a href="order-manager" class="btn btn-primary w-100">List</a>
                         </td>
                     </tr>
 
