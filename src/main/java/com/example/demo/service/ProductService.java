@@ -1,10 +1,10 @@
 package com.example.demo.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Product;
-
-import java.util.List;
 
 @Service
 public interface ProductService {
@@ -23,6 +23,6 @@ public interface ProductService {
 
 	List<Product> sortDescByPrice();
 	
-	
+	void deleteProductById(Long id);
 
 }
