@@ -35,4 +35,10 @@ public class OrderServiceImpl implements OrderService{
 		
 	}
 
+	@Override
+	public void deleteOrder(Long id) {
+		orderRepository.deleteById(id);
+		
+	}
+
 }

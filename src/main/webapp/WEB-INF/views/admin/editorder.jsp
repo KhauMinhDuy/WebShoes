@@ -18,47 +18,42 @@
         <div class="w-50 text-center mx-auto">
 
             <h1 class="text-center">Edit Order</h1>
-            <form:form action="save-account" method="post" modelAttribute="account">
+            <form:form action="save-order" method="post" modelAttribute="order">
                 <table class="table table-bordered">
                     <caption></caption>
+                    <input class="w-100" type="hidden" name="id" value="${order.id}">
                     <tr>
                         <th scope="col">Username</th>
                         <th scope="col">
-                            <input class="w-100" type="text" name="username" value="${account.username}">
+                            <input class="w-100" type="text" name="name" value="${order.name}">
                         </th>
                     </tr>
 
                     <tr>
                         <td>Password</td>
                         <td>
-                            <input class="w-100" type="text" name="password" value="${account.password}">
+                            <input class="w-100" type="text" name=email value="${order.email}">
                         </td>
                     </tr>
 
                     <tr>
                         <td>Firstname</td>
                         <td>
-                            <input class="w-100" type="text" name="firstname" value="${account.firstname}">
+                            <input class="w-100" type="text" name="address" value="${order.address}">
                         </td>
                     </tr>
 
-                    <tr>
-                        <td>Lastname</td>
-                        <td>
-                            <input class="w-100" type="text" name="lastname" value="${account.lastname}">
-                        </td>
-                    </tr>
 
                     <tr>
                         <td>Email</td>
                         <td>
-                            <input class="w-100" type="text" name="email" value="${account.email}">
+                            <input class="w-100" type="text" name="phone" value="${order.phone}">
                         </td>
                     </tr>
 
                     <tr>
                         <td colspan="2">
-                            <input class="btn btn-primary w-100 mx-1" type="submit" value="NEW ACCOUNT">
+                            <input class="btn btn-primary w-100 mx-1" type="submit" value="Edit Order">
                         </td>
                     </tr>
 

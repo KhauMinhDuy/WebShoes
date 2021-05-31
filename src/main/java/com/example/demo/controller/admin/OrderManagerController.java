@@ -1,5 +1,6 @@
 package com.example.demo.controller.admin;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,15 +34,24 @@ public class OrderManagerController {
     }
     
     @GetMapping("/edit-order")
-    public String editOrder(@RequestParam("id") String id) {
+    public String editOrder(@RequestParam("id") String id, Model model) {
     	Order order = orderService.getOrder(Long.parseLong(id));
-    	
+    	model.addAttribute("order", order);
     	return "admin/editorder";
+    }
+    
+    @GetMapping("/delete-order")
+    public String deleteOrder(@RequestParam("id") String id) {
+    	orderService.deleteOrder(Long.parseLong(id));
+    	return "redirect:/order-manager";
     }
     
     @PostMapping("/save-order")
     public String saveOrder(@ModelAttribute("order") Order order) {
-    	
+    	order.setOrderDate(LocalDateTime.now());
+    	orderService.save(order);
     	return "redirect:/order-manager";
     }
+    
+    
 }
