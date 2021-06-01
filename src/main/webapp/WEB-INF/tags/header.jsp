@@ -18,20 +18,22 @@
                 <i class="fas fa-heart me-2"></i>
                 <span>Yêu thích</span>
             </a>
-            <a href="login" class="me-4">
+            
 
                 <c:choose>
                     <c:when test="${sessionScope.username != null }">
-                        <a class="text-white" href="user">${sessionScope.username }</a>
-                        <a class="text-white" href="perform_logout"> (Thoat)</a>
+                        <a id="username" class="text-white me-2" href="user"><span style="font-size: 14px;">${sessionScope.username }</span></a>
+                        <a id="user_logout" class="text-white me-4" href="perform_logout"><span style="font-size: 14px;">(Thoat)</span> </a>
                     </c:when>
                     <c:otherwise>
-                        <i class="fas fa-user me-2"></i>
-                        <span>Đăng nhập</span>
+	                    <a href="login" class="me-4">
+	                        <i class="fas fa-user me-2"></i>
+	                        <span>Đăng nhập</span>
+	                    </a>
                     </c:otherwise>
                 </c:choose>
 
-            </a>
+            
             <a href="#" class="me-5">
                 <i class="fas fa-shopping-cart me-2"></i>
                 <span>Giỏ hàng</span>

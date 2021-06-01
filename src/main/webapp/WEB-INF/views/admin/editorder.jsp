@@ -16,12 +16,12 @@
 <div class="container">
     <div class="row">
         <div class="w-50 text-center mx-auto">
-
             <h1 class="text-center">Edit Order</h1>
             <form:form action="save-order" method="post" modelAttribute="order">
                 <table class="table table-bordered">
                     <caption></caption>
                     <input class="w-100" type="hidden" name="id" value="${order.id}">
+                    <input class="w-100" type="hidden" name="accountUsername" value="${order.account.username}">
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">
@@ -62,9 +62,7 @@
                             <a href="order-manager" class="btn btn-primary w-100">List</a>
                         </td>
                     </tr>
-
                 </table>
-
             </form:form>
         </div>
     </div>

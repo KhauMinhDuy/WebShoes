@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.model.Order;
+import com.example.demo.service.AccountService;
 import com.example.demo.service.OrderService;
-import com.example.demo.service.ProductService;
 
 @Controller
 public class OrderManagerController {
@@ -22,7 +22,7 @@ public class OrderManagerController {
 	private OrderService orderService;
 	
 	@Autowired
-	private ProductService productService;
+	private AccountService accountService;
 	
     @GetMapping("/order-manager")
     public String getOrderManager(Model model) {
@@ -47,8 +47,9 @@ public class OrderManagerController {
     }
     
     @PostMapping("/save-order")
-    public String saveOrder(@ModelAttribute("order") Order order) {
+    public String saveOrder(@ModelAttribute("order") Order order, @RequestParam("accountUsername") String accountUsername) {
     	order.setOrderDate(LocalDateTime.now());
+    	order.setAccount(accountService.findByUsername(accountUsername));
     	orderService.save(order);
     	return "redirect:/order-manager";
     }

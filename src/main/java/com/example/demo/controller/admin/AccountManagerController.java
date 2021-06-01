@@ -47,10 +47,10 @@ public class AccountManagerController {
 
 	@PostMapping("/save-account")
 	public String saveAccount(@ModelAttribute("account") Account account, Model model) {
-		System.out.println(account);
 		Account save = null;
 		if (accountService.findByUsername(account.getUsername()) != null) {
-			save = accountService.save(account);
+			model.addAttribute("message", "Account Already exists");
+			return "admin/newaccount";
 		} else {
 			account.setPassword(passwordEncoder.encode(account.getPassword()));
 			save = accountService.save(account);

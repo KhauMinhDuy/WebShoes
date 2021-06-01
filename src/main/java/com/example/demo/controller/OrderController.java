@@ -29,7 +29,8 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@GetMapping("/order-success")
-	public String orderSuccess(@RequestParam("id") String id,
+	public String orderSuccess(
+			@RequestParam("id") String id,
 			@RequestParam("name") String name,
 			@RequestParam("phone") String phone,
 			@RequestParam("email") String email,

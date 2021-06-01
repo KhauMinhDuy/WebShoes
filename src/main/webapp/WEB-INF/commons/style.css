@@ -528,3 +528,12 @@ footer ul li a:hover {
 	width: 40%;
 }
 
+#username {
+	color: #F15E2C;
+}
+
+#user_logout:hover {
+	color: #F15E2C;
+}
+
+
