@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -31,11 +32,15 @@ public class Order {
 
 	private LocalDateTime orderDate;
 
+	private Integer size;
+
+	private Integer total;
+
 	@ManyToOne
 	@JoinColumn(name = "account_id")
 	private Account account;
-	
-	@ManyToMany
+
+	@ManyToMany(fetch = FetchType.EAGER)
 	private List<Product> products = new ArrayList<>();
 
 	public Order() {
@@ -49,6 +54,18 @@ public class Order {
 		this.email = email;
 		this.address = address;
 		this.orderDate = orderDate;
+	}
+
+	public Order(String name, String phone, String email, String address, LocalDateTime orderDate, Integer size,
+			Integer total) {
+		super();
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.address = address;
+		this.orderDate = orderDate;
+		this.size = size;
+		this.total = total;
 	}
 
 	public Long getId() {
@@ -114,9 +131,25 @@ public class Order {
 	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
-	
+
 	public void addProduct(Product product) {
 		this.products.add(product);
+	}
+
+	public Integer getSize() {
+		return size;
+	}
+
+	public void setSize(Integer size) {
+		this.size = size;
+	}
+
+	public Integer getTotal() {
+		return total;
+	}
+
+	public void setTotal(Integer total) {
+		this.total = total;
 	}
 
 }

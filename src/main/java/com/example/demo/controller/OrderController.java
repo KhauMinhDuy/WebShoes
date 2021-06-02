@@ -30,15 +30,20 @@ public class OrderController {
 	
 	@GetMapping("/order-success")
 	public String orderSuccess(
-			@RequestParam("id") String id,
+			@RequestParam("id") String productId,
 			@RequestParam("name") String name,
 			@RequestParam("phone") String phone,
 			@RequestParam("email") String email,
-			@RequestParam("address") String address, HttpSession session) {
+			@RequestParam("address") String address,
+			@RequestParam("size") String size,
+			@RequestParam("total") String total, HttpSession session) {
 		
-		Order order = new Order(name, phone, email, address, LocalDateTime.now());
+		Order order = new Order(name, phone, email, address, 
+				LocalDateTime.now(), 
+				Integer.parseInt(size),
+				Integer.parseInt(total));
 		Account username = accountService.findByUsername((String)session.getAttribute("username"));
-		Product product = productService.getProduct(Long.parseLong(id));
+		Product product = productService.getProduct(Long.parseLong(productId));
 		order.setAccount(username);
 		order.addProduct(product);
 		product.addOrder(order);

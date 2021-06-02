@@ -31,6 +31,8 @@
                 </div>
 
                 <input type="hidden" name="id" value="${product.id}">
+                <input type="hidden" name="total" value="${total}">
+                <input type="hidden" name="size" value="${size}">
 				
                 <div class="my-4">
                     <input required="required" class="" type="text" name="name"  placeholder="Ho Ten"

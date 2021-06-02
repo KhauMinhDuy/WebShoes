@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib uri = "http://www.springframework.org/tags/form" prefix = "form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@
     <title>Order Manager</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
     	<div>
     		<h1 class="text-center">Order Manager</h1>
 			<div class="text-center ">
@@ -37,6 +38,11 @@
 	    				<th scope="col">Ngay Dat Hang</th>
 	    				<th scope="col">Dia Chi</th>
 	    				<th scope="col">Username</th>
+	    				<th scope="col">Ten San Pham</th>
+	    				<th scope="col">Gia</th>
+	    				<th scope="col">So Luong</th>
+	    				<th scope="col">Size</th>
+	    				<th scope="col">Thanh Tien</th>
 						<th scope="col" style="width: 250px">Action</th>
 	    			</tr>
     			</thead>
@@ -49,6 +55,11 @@
 	    				<td>${order.orderDate }</td>
 	    				<td>${order.address }</td>
 	    				<td>${order.account.username }</td>
+	    				<td>${order.getProducts().get(0).getName() }</td>
+	    				<td><fmt:formatNumber type="number" value="${order.getProducts().get(0).getPrice() }"/></td>
+	    				<td>${order.total }</td>
+	    				<td>${order.size }</td>
+	    				<td><fmt:formatNumber type="number" value="${order.getProducts().get(0).getPrice() * order.total }"/></td>
 						<td style="width: 250px">
 							<a href="edit-order?id=${order.id}" class="btn btn-info">Edit</a>
 							<a href="delete-order?id=${order.id}" class="btn btn-danger">Delete</a>
