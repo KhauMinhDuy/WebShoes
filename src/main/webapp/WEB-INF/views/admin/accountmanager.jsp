@@ -17,7 +17,8 @@
     	<div>
     		<h1 class="text-center">Account Manager</h1>
 			<div class="text-center mb-2">
-    			<a href="new-account" class="btn btn-primary">New Account</a>
+				<a href="admin-manager" class="btn btn-primary text-center my-2">Admin Manager</a> <br>
+    			<a href="new-account" class="btn btn-primary my-2">New Account</a>
 			</div>
     		<table class="table table-bordered border table-hover">
 				<caption></caption>

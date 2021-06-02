@@ -23,6 +23,10 @@
     <div class="container">
     	<div>
     		<h1 class="text-center">Order Manager</h1>
+			<div class="text-center ">
+				<a href="admin-manager" class="btn btn-primary text-center text-white my-2">Admin Manager</a>
+			</div>
+
     		<table class="table table-bordered border table-hover">
 				<caption></caption>
     			<thead class="table-dark">

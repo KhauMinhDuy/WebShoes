@@ -27,6 +27,7 @@
         </c:if>
         <form:form action="saveAccount" modelAttribute="account" method="post">
             <table class="table">
+                <caption></caption>
                 <tr>
                     <td>Username</td>
                     <td><input class="border border-dark w-100" type="text" name="username"/></td>

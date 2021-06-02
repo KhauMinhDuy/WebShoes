@@ -15,6 +15,11 @@ public class AdminController {
         return "admin/home";
     }
 
+    @GetMapping("/admin-manager")
+    public String adminManager() {
+        return "admin/adminmanager";
+    }
+
     @PostMapping("/admin-login")
     public String adminLogin(Model model,
                              @RequestParam("username") String username,

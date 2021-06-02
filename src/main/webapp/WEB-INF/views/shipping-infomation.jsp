@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
@@ -63,15 +62,14 @@
                     <div class="ps-4 my-2" style="color: #808080; font-size: 20px;">${product.color }</div>
                     <div class="row">
                         <div class="col-6">
-                            <div class="ps-4 my-2" style="color: #808080; font-size: 20px;">Size:
-                                ${size }</div>
+                            <div class="ps-4 my-2" style="color: #808080; font-size: 20px;">Size: ${size }</div>
                         </div>
                         <div class="col-6">
                             <div class="ps-4 my-2" style="color: #808080; font-size: 20px;">x${total }</div>
                         </div>
                         <div class="col-6">
                             <div class="ps-4 my-2" style="color: #F15E2C; font-size: 20px; font-weight: bold;">
-                                <fmt:formatNumber type="number" value="${price }"/> VND
+                                <fmt:formatNumber type="number" value="${price }"/> VNĐ
                             </div>
                         </div>
                     </div>

@@ -12,6 +12,7 @@ import javax.persistence.SecondaryTable;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "users")
@@ -33,6 +34,7 @@ public class Account {
     private String email;
 
     @NotBlank(message = "password not blank")
+    @Size(min = 6, message = "Password should have at least 6 characters")
     private String password;
 
     @Column(name = "enabled", columnDefinition = "tinyint default 1")

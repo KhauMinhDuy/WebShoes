@@ -21,6 +21,7 @@
     <title>Product Detail</title>
 </head>
 <body>
+
 <%@include file="/WEB-INF/tags/header.jsp" %>
 <div class="container">
     <div class="row my-5">
@@ -32,17 +33,24 @@
                 <input type="hidden" name="id" value="${product.id}">
                 <h2 class="my-3">${product.name}</h2>
                 <h5 class="my-4">Tình trạng: <strong>New Arriva</strong></h5>
-                <h3 class="my-4 " style="color: orange;"><fmt:formatNumber type="number" value="${product.price}"/>
-                    VND</h3>
+                <h3 class="my-4 " style="color: orange;"><fmt:formatNumber type="number" value="${product.price}"/> VNĐ</h3>
                 <div class="row">
                     <div class="col-6">
                         <div class="fw-bold">Size</div>
                         <select style="height: 30px;" class="w-100" name="size">
+                            <option value="35">30</option>
+                            <option value="36">31</option>
+                            <option value="37">32</option>
+                            <option value="38">33</option>
+                            <option value="39">34</option>
                             <option value="35">35</option>
                             <option value="36">36</option>
                             <option value="37">37</option>
                             <option value="38">38</option>
                             <option value="39">39</option>
+                            <option value="40">40</option>
+                            <option value="41">41</option>
+                            <option value="42">42</option>
                         </select>
                     </div>
 

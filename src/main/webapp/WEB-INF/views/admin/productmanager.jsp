@@ -44,7 +44,9 @@
 <body>
 <div class="container-fluid d-flex align-items-center flex-column">
     <h1 class="pt-5 pb-5">Porducts Manager</h1>
-    <a href="new-product" class="btn btn-primary text-center">New Product</a>
+    <a href="admin-manager" class="btn btn-primary text-center my-2">Admin Manager</a>
+    <a href="new-product" class="btn btn-primary text-center my-2">New Product</a>
+
     <table id="table-wrapper">
         <caption></caption>
         <tr class="bg-secondary"
@@ -139,7 +141,6 @@
             </tr>
         </c:forEach>
     </table>
-
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
