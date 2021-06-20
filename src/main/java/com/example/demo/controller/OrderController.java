@@ -42,6 +42,7 @@ public class OrderController {
 				LocalDateTime.now(), 
 				Integer.parseInt(size),
 				Integer.parseInt(total));
+		
 		Account username = accountService.findByUsername((String)session.getAttribute("username"));
 		Product product = productService.getProduct(Long.parseLong(productId));
 		order.setAccount(username);

@@ -22,6 +22,7 @@
                     <caption></caption>
                     <input class="w-100" type="hidden" name="id" value="${order.id}">
                     <input class="w-100" type="hidden" name="accountUsername" value="${order.account.username}">
+                    <input class="w-100" type="hidden" name="productsID" value="${order.products.get(0).getId()}">
                     <tr>
                         <th scope="col">Name</th>
                         <th scope="col">
